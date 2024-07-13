@@ -1,0 +1,328 @@
+/*removed margin for all*/
+* {
+    margin: 0px;
+}
+
+/* 1) resize all icon and images to make them easy to handle */
+
+/* resized icon */
+.left>img:nth-of-type(1) {
+    height: 60px;
+    width: 60px;
+}
+
+/*resized search bar profile pic and trending img*/
+.searchBarProfilePic>img,
+.trendingProfilePic>img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+
+/*resized dashboard icons*/
+/*search icon*/
+/*project card icons*/
+/*bell icon in top bar*/
+.tab>img,
+.searchIcon>img,
+.projectCardIcons>img,
+.bell>img {
+    height: 30px;
+    width: 30px;
+
+}
+
+/*resize main profile pic*/
+.profileBarIcon>img {
+    height: 80px;
+    border-radius: 50%;
+}
+
+
+/* 2) set font */
+
+@font-face {
+    font-family: extra-bold;
+    src: url(./fonts/Roboto-Black.ttf);
+}
+
+@font-face {
+    font-family: simple-bold;
+    src: url(./fonts/Roboto-Bold.ttf);
+}
+
+@font-face {
+    font-family: simple-light;
+    src: url(./fonts/Roboto-Medium.ttf);
+}
+
+@font-face {
+    font-family: simple-lightest;
+    src: url(./fonts/Roboto-Light.ttf);
+}
+
+/*extra bold to profile name*/
+.profileName {
+    font-family: "extra-bold", serif;
+}
+
+
+/*simple bold for greet text, topBar Profile name, content headings, dashboard title, dashboard tabTitles*/
+.greetText,
+.topBarProfileName,
+.contentTitle,
+.title,
+.tabTitle {
+    font-family: "simple-bold", serif;
+}
+
+/*simple-light for project titles, announcement titles, trending profile names*/
+.projectCardTitle,
+.noticeCardTitle,
+.trendingProfileTag {
+    font-family: "simple-light", serif;
+}
+
+/*simple-lightest for project description, announcement description, trending description*/
+.projectCardContent,
+.noticeContent,
+.tendingProfileDescription {
+    font-family: "simple-lightest", serif;
+}
+
+
+
+/*2) set temporary color to help arrange grids*/
+
+
+/*Blue and it lighter shade for dashboard--> 3 levels 500, 300, 100*/
+.left {
+    background-color: #06b6d4;
+}
+
+/* .upperTabs,
+.lowerTabs,
+.title,
+.left>img:nth-of-type(1) {
+    background-color: #67e8f9;
+}
+
+.tab {
+    background-color: #cffafe;
+} */
+
+/*Green and it's lighter shade for topBar 2 levels --> 500, 300*/
+
+.topbar {
+    background-color: #bef264;
+}
+
+/* .topbar>div {
+    background-color: #84cc16;
+} */
+
+/*Yellow and it's lighter shades for profileBar, 3 levels--> 500, 300, 100*/
+.profileBar {
+    background-color: #fde047;
+}
+
+/* .profileBar>div {
+    background-color: #eab308; 
+} */
+
+.profileBar>div>span,
+.profileBar>div>span>button {
+    background-color: #fef9c3;
+}
+
+/*purple and it's lighter shades for content 3 levels --> 600, 400, 200, vioet-300 */
+.content {
+    background-color: #9333ea;
+}
+
+.projects>div,
+.notice>div,
+.trending>div {
+    background-color: #c084fc;
+}
+
+.projectCardsCollection>div,
+.noticeCardsCollection>div,
+.trendingCards>div {
+    background-color: #e9d5ff;
+}
+
+.projectCard>div,
+.noticeCard>p,
+.profileCard>div {
+    background-color: #c4b5fd;
+}
+
+/* 2) set left right apart*/
+
+.dashboard {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    height: 100vh;
+}
+
+
+/* 3) set the elements of dashboard in their position */
+
+.left {
+    padding-left: 10px;
+    display: grid;
+    grid-template-columns: 60px 3fr;
+    grid-template-rows: 0.12fr 0.36fr 0.24fr;
+}
+
+.tab {
+    display: grid;
+    grid-template-columns: 60px 3fr;
+    margin-top: 10px;
+}
+
+.tab>img {
+    justify-self: center;
+}
+
+.tab>span {
+    font-size: 18px;
+    justify-self: start;
+    align-self: center;
+}
+
+.title {
+    font-size: 30px;
+    align-self: center;
+    grid-column: 2/3;
+}
+
+.left>img:nth-of-type(1) {
+    align-self: center;
+}
+
+.upperTabs,
+.lowerTabs {
+    grid-column: 1/3;
+}
+
+
+/*Stick the right part*/
+.right {
+    grid-column: 2/3;
+}
+
+/*giving 5 columns and to the topbar*/
+/*sizing the columns properly*/
+.topbar {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    justify-items: center;
+    align-items: center;
+    padding: 10px;
+}
+
+/*Adjusting font size for username*/
+.topBarProfileName {
+    font-size: 18px;
+}
+
+/*stretching out the search box, and adding style to it*/
+.searchBar {
+    grid-column: 2/7;
+    width: 100%;
+    display: flex;
+}
+
+.searchBar>input {
+    flex: 1;
+    border-radius: 30px;
+    height: 30px;
+}
+
+/*putting right most stuff in their place*/
+.topBarProfileName {
+    grid-column: 10/11;
+}
+
+.searchBarProfilePic {
+    grid-column: 9/10;
+}
+
+.bell {
+    grid-column: 8/9;
+}
+
+
+/*onto the profile bar now*/
+.profileBar {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    padding: 10px;
+}
+
+/*taking care of proile pic*/
+.profileBarIcon {
+    grid-row: 1/3;
+    grid-column: 1/3;
+}
+
+.greetText {
+    grid-row: 1/2;
+    grid-column: 3/7;
+    justify-self: start;
+    align-self: end;
+    font-size: 20px;
+}
+
+.profileName {
+    grid-row: 2/3;
+    grid-column: 3/8;
+    justify-self: start;
+    align-self: start;
+    font-size: 25px;
+}
+
+.New {
+    grid-column: 8/9;
+    grid-row: 1/3;
+}
+
+.upload {
+    grid-column: 9/10;
+    grid-row: 1/3;
+}
+
+.Share {
+    grid-column: 10/11;
+    grid-row: 1/3;
+}
+
+.New,
+.upload,
+.Share {
+    height: 50px;
+    width: 100px;
+    border-radius: 10px;
+}
+
+
+
+/*putting the buttons aside and styling them*/
+
+
+
+
+/*
+
+4) now to the right side: arrange topbar, profilebar, content properly
+6) complete profilebar
+7) divide content into projects, announcements, trending
+8) complete announcement
+9) complete trending
+10) put in final colors
+11) complete projects */
