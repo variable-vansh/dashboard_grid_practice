@@ -97,7 +97,7 @@
 
 /*Blue and it lighter shade for dashboard--> 3 levels 500, 300, 100*/
 .left {
-    background-color: #06b6d4;
+    background-color: #67e8f9;
 }
 
 /* .upperTabs,
@@ -137,13 +137,12 @@
 
 /*purple and it's lighter shades for content 3 levels --> 600, 400, 200, vioet-300 */
 .content {
-    background-color: #9333ea;
+    /* background-color: #9333ea; */
+    background-color: #d8b4fe;
 }
 
-.projects>div,
-.notice>div,
-.trending>div {
-    background-color: #c084fc;
+.content>div {
+    padding: 20px;
 }
 
 .projectCardsCollection>div,
@@ -152,11 +151,11 @@
     background-color: #e9d5ff;
 }
 
-.projectCard>div,
+/* .projectCard>div,
 .noticeCard>p,
 .profileCard>div {
     background-color: #c4b5fd;
-}
+} */
 
 /* 2) set left right apart*/
 
@@ -310,11 +309,122 @@
     border-radius: 10px;
 }
 
+/*dividing content into 3 columns*/
+/*then deal with each of the 3 sections separately*/
+.content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 15px;
+    padding: 20px;
+    /* height: 75%vh; */
+}
+
+.projects {
+    grid-column: 1/3;
+    grid-row: 1/-1;
+}
+
+.trending {
+    grid-column: 3/4;
+}
+
+/*complete announcement grid*/
+
+hr {
+    border-color: #9333ea;
+}
+
+.noticeCard {
+    padding: 10px;
+}
+
+.contentTitle {
+    padding-left: 20px;
+}
+
+.noticeCardsCollection {
+    padding: 10px;
+}
 
 
-/*putting the buttons aside and styling them*/
+/*4 rows in trending block*/
+/* .trending {
+    display: grid;
+    grid-template-rows: 0.1fr 1fr;
+} */
 
+.trendingCards {
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    gap: 10px;
+}
 
+/*arrange each card separately*/
+
+.profileCard {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 1fr 1fr;
+    background-color: red;
+}
+
+.trendingProfilePic {
+    grid-row: 1/3;
+    justify-self: center;
+    align-self: center;
+}
+
+.trendingProfileTag {
+    align-self: end;
+}
+
+.trendingCards {
+    padding: 10px;
+}
+
+/*complete style a single project card*/
+.projectCard {
+    display: grid;
+    grid-template-rows: 1fr 2fr 1fr;
+    padding: 10px;
+    border-left: 5px solid #9333ea;
+    border-radius: 5px;
+}
+
+/*to make a 3 by 2 grid in project box*/
+.projectCardsCollection {
+    height: 60vh;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.projectCardIcons {
+    justify-self: end;
+    align-self: end;
+}
+
+.contentTitle {
+    font-size: 20px;
+}
+
+.noticeCardsCollection,
+.trendingCards {
+    background-color: #e9d5ff;
+}
+
+.noticeCardsCollection,
+.trendingCards {
+    margin-top: 10px;
+    border-radius: 10px;
+}
+
+.trendingCards {
+    padding: 20px;
+}
 
 
 /*
